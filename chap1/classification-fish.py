@@ -80,6 +80,6 @@ for n in range(5, 50):
     score = kn.score(fish_data, fish_target)
     print(n,score)
     # 100% 정확도에 미치지 못하는 이웃 개수 출력
-    # if score < 1:
-    #     print(n, score)
-    #     break
+    if score < 1:
+        print(n, score)
+        break
