@@ -20,6 +20,7 @@ perch_weight = np.array(
      1000.0, 1000.0]
      )
 
+
 #### 산점도 그리기
 import matplotlib.pyplot as plt
 
