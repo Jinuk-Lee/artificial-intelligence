@@ -44,6 +44,7 @@ print(test_array.shape)
 # 아래 코드의 주석을 제거하고 실행하면 에러가 발생합니다
 # test_array = test_array.reshape(2, 3)
 
+
 train_input = train_input.reshape(-1, 1)
 test_input = test_input.reshape(-1, 1)
 print(train_input.shape, test_input.shape)
