@@ -1,6 +1,7 @@
 """# 트리의 앙상블"""
 """## 랜덤 포레스트"""
 
+"와인의 데이터셋을 판다스로 불러오고 훈련 세트와 테스트 세트로 나눕니다."
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -11,6 +12,10 @@ data = wine[['alcohol', 'sugar', 'pH']].to_numpy()
 target = wine['class'].to_numpy()
 
 train_input, test_input, train_target, test_target = train_test_split(data, target, test_size=0.2, random_state=42)
+
+"cross_validate() 함수를 사용해 교차검증을 수행하고 RamdomForestClassfier은 기본적으로 100개" \
+"의 결정 트리를 사용해서 n_jobs를 -1로 설정하여 모든 cpu를 사용하고" \
+"cross_validate()의 n_jobs 매개변수를 -1로 지정해서 병렬로 교차검증을 합니다."
 
 from sklearn.model_selection import cross_validate
 from sklearn.ensemble import RandomForestClassifier
@@ -23,12 +28,13 @@ print(np.mean(scores['train_score']), np.mean(scores['test_score']))
 rf.fit(train_input, train_target)
 print(rf.feature_importances_)
 
+//
 rf = RandomForestClassifier(oob_score=True, n_jobs=-1, random_state=42)
 
 rf.fit(train_input, train_target)
 print(rf.oob_score_)
 
-"""## 엑스트라트리"""
+""## 엑스트라트리""
 from sklearn.ensemble import ExtraTreesClassifier
 
 et = ExtraTreesClassifier(n_jobs=-1, random_state=42)
