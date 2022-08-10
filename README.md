@@ -16,3 +16,16 @@ Chapter2, [데이터 다루기](https://jinuk.notion.site/Chapter2-42672a35b5554
 - 올바른 결과 도출을 위한 **데이터 전처리**과정에 대해서 알아 봅니다.
   - 이웃까지의 거리와 이웃 샘플의 인덱스를 변환하는 `kneighbors()` 매서드를 활용합니다.
 - **표준점수**로 특성의 스케일을 변환하는 방법을 배웁니다.
+
+Chapter3, [회귀 알고리즘과 모델 규제](https://jinuk.notion.site/Chapter3-c1a728d46ace4e1183560fc4a47bc6bd)
+- 지도 학습 알고리즘의 한 종류인 **회귀 알고리즘**에 대해 배웁니다.
+
+
+
+Chapter4, [다양한 분류 알고리즘](https://jinuk.notion.site/Chapter4-81bad12440464d1eb0d4e33e4b395cae)
+
+
+Chapter5, [트리 알고리즘](https://jinuk.notion.site/Chapter5-c0084b46f731475b8e2f97d60f7e8ad1)
+
+
+Chapter6, [비지도 학습](https://jinuk.notion.site/Chapter6-eea0b547b0d54a8bbdce7d337e26f475) 
