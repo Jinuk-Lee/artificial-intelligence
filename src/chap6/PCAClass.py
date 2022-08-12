@@ -42,12 +42,11 @@ def draw_fruits(arr, ratio=1):
 
 draw_fruits(pca.components_.reshape(-1, 100, 100))
 
-"주성분을 찾앗으므로 원본 데이터를 주성분에 투영해서 턱성의 개수를 50개로 줄일 수 있습니다."
+"주성분을 찾았으므로 원본 데이터를 주성분에 투영해서 특성의 개수를 50개로 줄일 수 있습니다."
 print(fruits_2d.shape)
-
 fruits_pca = pca.transform(fruits_2d)
-
 print(fruits_pca.shape)
+
 
 """## 원본 데이터 재구성"""
 "10,000개의 특성을 50개로 줄였기 때문에 어느 정도 손실이 발생할 수밖에 없습니다." \
@@ -59,6 +58,7 @@ print(fruits_inverse.shape)
 "이 복원한 10,000개의 데이터를 100 * 100 크기로 바꾸어 100개씩 나누어 출력한다."
 fruits_reconstruct = fruits_inverse.reshape(-1, 100, 100)
 for start in [0, 100, 200]:
+    "과일별로 100개 씩 나눠서 출력"
     draw_fruits(fruits_reconstruct[start:start + 100])
     print("\n")
 
@@ -116,6 +116,7 @@ from sklearn.cluster import KMeans
 
 km = KMeans(n_clusters=3, random_state=42)
 km.fit(fruits_pca)
+
 print(np.unique(km.labels_, return_counts=True))
 
 "KMeans 가 찾은 레이블을 사용해 과일 이미지를 출력한다."
